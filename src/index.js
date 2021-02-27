@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Clock from './component/Clock';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,21 +12,19 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// function tick() {
-//   const element = (
-//     <div>
-//       <h1>Hello, world.</h1>
-//       <h2>It is {new Date().toLocaleString()}</h2>
-//     </div>
-//   );
+function tick() {
+  const element = (
+    <Clock />
+  );
 
-//   ReactDOM.render(
-//     element,
-//     document.getElementById('root')
-//   )
-// }
+  ReactDOM.render(
+    element,
+    document.getElementById('clock')
+  )
+}
 
 // setInterval(tick, 1000);
+tick();
 
 // function Welcome(props) {
 //   return <h1>Hello {props.name}</h1>;
