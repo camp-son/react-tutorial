@@ -5,6 +5,10 @@ import Toggle from "./component/Toggle";
 import LoginControl from "./component/LoginControl";
 import NumberList from "./component/NumberList";
 import Blog from "./component/Blog";
+import NameForm from "./component/NameForm";
+import EssayForm from "./component/EssayForm";
+import FlavorForm from "./component/FlavorForm";
+import Reservation from "./component/Reservation";
 
 const numbers = [1, 2, 3, 4, 5];
 // const listItems = numbers.map((number) => <li>{number}</li>);
@@ -35,6 +39,10 @@ function App() {
       {/* <ul>{listItems}</ul> */}
       <NumberList numbers={numbers} />
       <Blog posts={posts} />
+      <NameForm />
+      <EssayForm />
+      <FlavorForm />
+      <Reservation />
     </div>
   );
 }
