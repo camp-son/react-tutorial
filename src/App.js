@@ -9,6 +9,7 @@ import NameForm from "./component/NameForm";
 import EssayForm from "./component/EssayForm";
 import FlavorForm from "./component/FlavorForm";
 import Reservation from "./component/Reservation";
+import Calculator from "./component/Calculator";
 
 const numbers = [1, 2, 3, 4, 5];
 // const listItems = numbers.map((number) => <li>{number}</li>);
@@ -43,6 +44,7 @@ function App() {
       <EssayForm />
       <FlavorForm />
       <Reservation />
+      <Calculator />
     </div>
   );
 }
