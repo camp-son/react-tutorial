@@ -1,30 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Clock from './component/Clock';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Clock from "./component/Clock";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 function tick() {
-  const element = (
-    <Clock />
-  );
+  const element = <Clock />;
 
-  ReactDOM.render(
-    element,
-    document.getElementById('clock')
-  )
+  ReactDOM.render(element, document.getElementById("clock"));
 }
 
 // setInterval(tick, 1000);
-tick();
+// tick();
 
 // function Welcome(props) {
 //   return <h1>Hello {props.name}</h1>;

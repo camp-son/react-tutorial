@@ -1,31 +1,55 @@
 import "./App.css";
-import Welcome from "./component/Welcome";
-import Comment from "./component/Comment";
-import Toggle from "./component/Toggle";
-import LoginControl from "./component/LoginControl";
-import NumberList from "./component/NumberList";
-import Blog from "./component/Blog";
-import NameForm from "./component/NameForm";
-import EssayForm from "./component/EssayForm";
-import FlavorForm from "./component/FlavorForm";
-import Reservation from "./component/Reservation";
-import Calculator from "./component/Calculator";
-import WelcomeDialog from "./component/WelcomeDialog";
+import FilterableProductTable from "./components/FilterableProductTable";
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 // const listItems = numbers.map((number) => <li>{number}</li>);
-const posts = [
-  { id: 1, title: "Hello world", content: "Welcome to learning React !" },
-  { id: 2, title: "Installation", content: "You can install React from npm." },
+// const posts = [
+//   { id: 1, title: "Hello world", content: "Welcome to learning React !" },
+//   { id: 2, title: "Installation", content: "You can install React from npm." },
+// ];
+
+const products = [
+  {
+    category: "Sporting Goods",
+    price: "$49.99",
+    stocked: true,
+    name: "Football",
+  },
+  {
+    category: "Electronics",
+    price: "$99.99",
+    stocked: true,
+    name: "iPod Touch",
+  },
+  {
+    category: "Sporting Goods",
+    price: "$29.99",
+    stocked: false,
+    name: "Basketball",
+  },
+  {
+    category: "Electronics",
+    price: "$399.99",
+    stocked: false,
+    name: "iPhone 5",
+  },
+  {
+    category: "Sporting Goods",
+    price: "$9.99",
+    stocked: true,
+    name: "Baseball",
+  },
+  { category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7" },
 ];
 
 function App() {
   return (
     <div>
-      <Welcome name="JY" />
-      <Welcome name="YJ" />
-      <Welcome name="Camp son" />
-      <Comment
+      <FilterableProductTable products={products} />
+      {/* <Welcome name="JY" /> */}
+      {/* <Welcome name="YJ" /> */}
+      {/* <Welcome name="Camp son" /> */}
+      {/* <Comment
         author={{
           name: "camp-son",
           avatarUrl:
@@ -33,20 +57,20 @@ function App() {
         }}
         text="Hello world"
         date={new Date()}
-      />
-      <Toggle />
+      /> */}
+      {/* <Toggle /> */}
       {/* <Greeting isLoggedIn/>
       <Greeting /> */}
-      <LoginControl />
+      {/* <LoginControl /> */}
       {/* <ul>{listItems}</ul> */}
-      <NumberList numbers={numbers} />
-      <Blog posts={posts} />
-      <NameForm />
-      <EssayForm />
-      <FlavorForm />
-      <Reservation />
-      <Calculator />
-      <WelcomeDialog />
+      {/* <NumberList numbers={numbers} /> */}
+      {/* <Blog posts={posts} /> */}
+      {/* <NameForm /> */}
+      {/* <EssayForm /> */}
+      {/* <FlavorForm /> */}
+      {/* <Reservation /> */}
+      {/* <Calculator /> */}
+      {/* <WelcomeDialog /> */}
     </div>
   );
 }
