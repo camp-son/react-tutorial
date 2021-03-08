@@ -3,12 +3,13 @@ import ProductRow from "./ProductRow";
 
 const ProductTable = (props) => {
   const categories = props.products
-    .sort((prev, next) => {
-      return (
+    .filter((product) => product.name.includes(props.keyword))
+    .filter((product) => (props.isOnlyStock ? product.stocked : true))
+    .sort(
+      (prev, next) =>
         prev.category.split("").reduce((s, c) => s + c.charCodeAt(), 0) -
         next.category.split("").reduce((s, c) => s + c.charCodeAt(), 0)
-      );
-    })
+    )
     .reduce((arr, product) => {
       const category = arr.findIndex(
         ({ props }) =>
