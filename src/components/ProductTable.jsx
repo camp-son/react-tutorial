@@ -3,7 +3,7 @@ import ProductRow from "./ProductRow";
 
 const ProductTable = (props) => {
   const categories = props.products
-    .filter((product) => product.name.includes(props.keyword))
+    .filter((product) => product.name?.toLowerCase().includes(props.keyword))
     .filter((product) => (props.isOnlyStock ? product.stocked : true))
     .sort(
       (prev, next) =>
